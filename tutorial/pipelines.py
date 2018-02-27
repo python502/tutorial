@@ -15,6 +15,7 @@ class DBPipeline(object):
                                              user='root',
                                              passwd='111111',
                                              cursorclass=MySQLdb.cursors.DictCursor,
+                                             charset="utf8",
                                              use_unicode=True)
 
     def process_item(self, item, spider):
@@ -33,7 +34,7 @@ class DBPipeline(object):
                 sql = 'insert into transfer_records(name,TxHash,Block,From_account,To_account,Value,TxFee,create_time,operate_type) values("{name}","{TxHash}","{Block}","{From_account}","{To_account}",{Value},{TxFee},"{create_time}","{operate_type}")'.format(**item)
                 tx.execute(sql)
         except Exception,e:
-            print 'e'*20
+            print '*'*20
             print sql
             print e
 
