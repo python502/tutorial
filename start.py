@@ -9,4 +9,4 @@
 # @Desc    :
 
 from scrapy import cmdline
-cmdline.execute("scrapy crawl etherscan -a id_name=0x2f70fab04c0b4aa88af11304ea1ebfcc851c75d11".split())
+cmdline.execute("scrapy crawl etherscan -a id_name=0x2f70fab04c0b4aa88af11304ea1ebfcc851c75d1".split())

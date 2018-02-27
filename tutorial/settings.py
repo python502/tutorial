@@ -95,3 +95,4 @@ ITEM_PIPELINES = {
     'tutorial.pipelines.DBPipeline': 300,#保存到mysql数据库
 }
 
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36'
