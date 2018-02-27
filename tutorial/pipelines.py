@@ -25,7 +25,6 @@ class DBPipeline(object):
     def _conditional_insert(self, tx, item):
         try:
             sql = 'select * from transfer_records where TxHash = "{TxHash}"'.format(**item)
-            print sql
             tx.execute(sql)
             result = tx.fetchone()
             if result:
@@ -40,3 +39,4 @@ class DBPipeline(object):
 
     def handle_error(self, e):
         print 'error',e
+

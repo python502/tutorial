@@ -90,6 +90,7 @@ MYSQL_PASSWD = '111111'         #数据库密码，请修改
 
 MYSQL_PORT = 3306               #数据库端口，在dbhelper中使用
 
+LOG_LEVEL = 'INFO'
 ITEM_PIPELINES = {
     'tutorial.pipelines.DBPipeline': 300,#保存到mysql数据库
 }
